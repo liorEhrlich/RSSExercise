@@ -1,11 +1,11 @@
-from bottle import run,template,route,error,static_file
+from bottle import run,template,route,error,static_file,request
 import feedparser
-
 
 
 @route('/getNews')
 def get_news():
-    feed = feedparser.parse("https://www.jpost.com/Rss/RssFeedsHeadlines.aspx")
+    rss = request.query["feed"]
+    feed = feedparser.parse(rss)
     new_obj = feed["entries"]
     final_dict = {}
     for elem in new_obj:

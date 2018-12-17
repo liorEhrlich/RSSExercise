@@ -13,6 +13,14 @@
 <div class="main">
     <h1>News Site!</h1>
     <button value="Refresh Page" onClick="window.location.reload()">Refresh</button>
+    <select id="newsSelectId" onchange="bringNews()">
+        <option value="https://www.jpost.com/Rss/RssFeedsHeadlines.aspx">JPost</option>
+        <option value="http://online.wsj.com/xml/rss/3_7011.xml">Wall street journal</option>
+        <option value="http://www.dailymail.co.uk/articles.rss">Daily Mail</option>
+        <option value="http://www.fifa.com/rss/index.xml">Fifa</option>
+        <option value="http://feeds.wired.com/wired/index">Wired</option>
+        <option value="http://feeds.videogamer.com/rss/allupdates.xml">Video Gamer</option>
+    </select>
     <ul id="articles">
     </ul>
 </div>
